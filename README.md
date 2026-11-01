@@ -10,5 +10,5 @@ Project web berbasis Laravel untuk mengelola dan memvisualisasikan data kandidat
 ## Database ERD (Entity Relationship Diagram)
 Berikut adalah rancangan relasi basis data antara tabel `stars` dan `toi_planets`:
 
-![ERD Exoplanet Catalog](erd-tess.png)
+![ERD Exoplanet Catalog](tess_catalog_ERD.drawio.png)
 
