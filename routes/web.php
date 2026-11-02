@@ -3,8 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ToiPlanetController;
 
-// Mengarahkan halaman utama (/) ke fungsi index di ToiPlanetController
-Route::get('/', [ToiPlanetController::class, 'index']);
+// Mengarahkan halaman utama (/) langsung ke daftar katalog planets
+Route::get('/', function () {
+    return redirect()->route('planets.index');
+});
 
-// Mendaftarkan rute otomatis untuk semua fungsi CRUD (Tambah, Edit, Hapus)
-Route::resource('catalog', ToiPlanetController::class);
+Route::post('/planets/import', [App\Http\Controllers\ToiPlanetController::class, 'importCsv'])->name('planets.import');
+
+
+// Mendaftarkan rute otomatis untuk semua fungsi CRUD
+Route::resource('planets', ToiPlanetController::class);

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Star extends Model
 {
-    protected $fillable = ['tic_id'];
+    protected $fillable = ['tic_id', 'name'];
 
     public function planets(): HasMany
     {
